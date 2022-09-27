@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <section id="assignment">
+     
+      <div class="Name div-style">
+        <h2>YOUR NAME:</h2>
+        <h3 v-if="Name">{{Name}}</h3>
+      </div>
+      <!-- 2) Output your age -->
+      <div class="Age div-style">
+        <p>Your Age:</p>
+        <p v-if="Age">{{Age}}</p>
+      </div>
+      <!-- 3) Output your age + 5 -->
+      <div class="AgePlus div-style">
+        <p>YOUR AGE in 5 years:</p>
+        <p v-if="Age">{{Age + 5}}</p>
+      </div>
+      <!-- 4) Output a random number (0 to 1) -->
+      <div class="random div-style">
+        <p>Favorite Number: RANDOM NUMBER BETWEEN 0 AND 1:</p>
+        <p>{{random}}</p>
+      </div>
+      <div>
+        <!-- 5) Display some image you found via Google -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-RrQp4GOBdlnkCPxZl5eRAvjpCMOoWgsxlQ&usqp=CAU" />
+      </div>
+      <!-- 6) Prepopulate the input field with your name via the "value" attribute -->
+      <div class="Inputs">
+        <div class="singleInput">
+          <label>Name</label>
+          <input type="text" v-model="Name" placeholder="John..."  maxlength="30"/>
+        </div>
+        <div class="singleInput">
+          <label>Age</label>
+        <input type="number" v-model="Age" placeholder="18..." />
+      </div>
+      <button @click="GetRandom">Random!</button>
+      </div>
+    </section>
+  </body>
+</html>
